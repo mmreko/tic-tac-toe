@@ -81,18 +81,26 @@ public class TicTacToe {
 	}
 
 	public static void main(String[] args) {
-		boolean CPUFirst = false;
+		boolean endGame = false;
 		
-		System.out.println("Welcome to Tic-Tac-Toe!");
-		System.out.println("Choose your sign (X or O):");
-		String playerSign = (new Scanner(System.in)).next();
-		if (playerSign.equals("X") || playerSign.equals("x")) CPUFirst = false;
-		else CPUFirst = true;
-		
-		if (CPUFirst)
-			CPUPlaysFirst();
-		else
-			humanPlaysFirst();
+		while (!endGame) {
+			boolean CPUFirst = false;
+			
+			System.out.println("Welcome to Tic-Tac-Toe!");
+			System.out.println("Choose your sign (X or O):");
+			String playerSign = (new Scanner(System.in)).next();
+			if (playerSign.equals("X") || playerSign.equals("x")) CPUFirst = false;
+			else CPUFirst = true;
+			
+			if (CPUFirst)
+				CPUPlaysFirst();
+			else
+				humanPlaysFirst();
+			
+			System.out.println("Start a new game? (Y or N): ");
+			String newGame = (new Scanner(System.in)).next();
+			if (newGame.equals("N") || newGame.equals("n")) endGame = true;
+		}
 		
 	}
 
