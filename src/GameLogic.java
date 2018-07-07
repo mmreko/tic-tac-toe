@@ -78,11 +78,11 @@ public class GameLogic {
 	
 	// Finds the best move for CPU to play as X
 	public static void playCPUasX() {
-		int min = currentNode.nextMoves[0].minMaxValue;
+		int max = currentNode.nextMoves[0].minMaxValue;
 		GameTree.Node next = currentNode.nextMoves[0];
 		for (int i=1; i<currentNode.numNextMoves; i++) {
-			if (currentNode.nextMoves[i].minMaxValue < min) {
-				min = currentNode.nextMoves[i].minMaxValue;
+			if (currentNode.nextMoves[i].minMaxValue > max) {
+				max = currentNode.nextMoves[i].minMaxValue;
 				next = currentNode.nextMoves[i];
 			}
 		}
