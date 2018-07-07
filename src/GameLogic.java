@@ -103,13 +103,18 @@ public class GameLogic {
 	}
 	
 	// Plays the next move chosen by the human player
-	public static void playHuman(int row, int column) {
+	public static boolean playHuman(int row, int column) {
+		if (currentNode.board[row][column] != ' ')
+			return false;
+		
 		for (int i=0; i<currentNode.numNextMoves; i++) {
 			if (currentNode.nextMoves[i].board[row][column] == currentPlayer) {
 				currentNode = currentNode.nextMoves[i];
 				break;
 			}
 		}
+		
+		return true;
 	}
 	
 	// Checks if the game ended
