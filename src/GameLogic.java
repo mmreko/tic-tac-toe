@@ -81,7 +81,8 @@ public class GameLogic {
 		int max = currentNode.nextMoves[0].minMaxValue;
 		GameTree.Node next = currentNode.nextMoves[0];
 		for (int i=1; i<currentNode.numNextMoves; i++) {
-			if (currentNode.nextMoves[i].minMaxValue > max) {
+			if (currentNode.nextMoves[i].minMaxValue > max || 
+					(currentNode.nextMoves[i].minMaxValue == max && currentNode.nextMoves[i].gameOver)) {
 				max = currentNode.nextMoves[i].minMaxValue;
 				next = currentNode.nextMoves[i];
 			}
@@ -94,7 +95,8 @@ public class GameLogic {
 		int min = currentNode.nextMoves[0].minMaxValue;
 		GameTree.Node next = currentNode.nextMoves[0];
 		for (int i=1; i<currentNode.numNextMoves; i++) {
-			if (currentNode.nextMoves[i].minMaxValue < min) {
+			if (currentNode.nextMoves[i].minMaxValue < min ||
+					(currentNode.nextMoves[i].minMaxValue == min && currentNode.nextMoves[i].gameOver)) {
 				min = currentNode.nextMoves[i].minMaxValue;
 				next = currentNode.nextMoves[i];
 			}
