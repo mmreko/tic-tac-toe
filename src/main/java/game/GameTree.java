@@ -1,16 +1,21 @@
+package game;
 import java.util.ArrayDeque;
 import java.util.Stack;
 
 public class GameTree {
 
 	// One node of the game tree
-	class Node {
+	public class Node {
 		char[][] board; // current status of the board
 		int minMaxValue; // value for the minimax algorithm
 		int level; // level of the node
 		Node[] nextMoves; // possible next moves 
 		int numNextMoves; // number of possible next moves
 		boolean gameOver; // flag indicating that the game ends in this node
+		
+		public int getMinMaxValue() {
+			return minMaxValue;
+		}
 		
 		public String toString() {
 			String s = "";
