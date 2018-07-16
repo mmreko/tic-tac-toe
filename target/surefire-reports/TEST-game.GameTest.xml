@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="game.GameTest" time="2.855" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="game.GameTest" time="4.031" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
     <property name="java.vm.version" value="25.121-b13"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\User\Desktop\Tic-Tac-Toe\tic-tac-toe"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\User\Desktop\Tic-Tac-Toe\FinalWithTests\tic-tac-toe"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\User\Desktop\Tic-Tac-Toe\tic-tac-toe"/>
+    <property name="user.dir" value="C:\Users\User\Desktop\Tic-Tac-Toe\FinalWithTests\tic-tac-toe"/>
     <property name="java.runtime.version" value="1.8.0_121-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed"/>
@@ -29,7 +29,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\Program Files\Apache\apache-maven-3.5.4\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone\;C:\Android;C:\Windows\System32;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Apache\apache-maven-3.5.4\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Docker Toolbox;C:\texlive\2017\bin\win32;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone\;C:\Android;C:\Windows\System32;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Apache\apache-maven-3.5.4\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Docker Toolbox;C:\texlive\2017\bin\win32;C:\Program Files\Apache\apache-maven-3.5.4\bin;;."/>
     <property name="maven.conf" value="C:\Program Files\Apache\apache-maven-3.5.4\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -65,14 +65,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="game.GameTest" name="testNextPlayer" time="1.049"/>
-  <testcase classname="game.GameTest" name="testTreeGeneration" time="1.172"/>
+  <testcase classname="game.GameTest" name="testNextPlayer" time="0.975"/>
+  <testcase classname="game.GameTest" name="testTreeGeneration" time="1.361"/>
+  <testcase classname="game.GameTest" name="testInvalidMove" time="0.21"/>
   <testcase classname="game.GameTest" name="testStatusRowWin" time="0"/>
   <testcase classname="game.GameTest" name="testStatusDiagonalWin1" time="0"/>
   <testcase classname="game.GameTest" name="testStatusDiagonalWin2" time="0"/>
-  <testcase classname="game.GameTest" name="testStatusStillPlaying" time="0.001"/>
-  <testcase classname="game.GameTest" name="testHumanFirst" time="0.201"/>
+  <testcase classname="game.GameTest" name="testStatusStillPlaying" time="0"/>
+  <testcase classname="game.GameTest" name="testHumanFirst" time="0.433"/>
   <testcase classname="game.GameTest" name="testStatusDraw" time="0"/>
-  <testcase classname="game.GameTest" name="testStatusColumnWin" time="0"/>
-  <testcase classname="game.GameTest" name="testCPUFirst" time="0.432"/>
+  <testcase classname="game.GameTest" name="testValidMove" time="0.854"/>
+  <testcase classname="game.GameTest" name="testStatusColumnWin" time="0.001"/>
+  <testcase classname="game.GameTest" name="testCPUFirst" time="0.197"/>
 </testsuite>
