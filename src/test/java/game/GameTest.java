@@ -101,6 +101,28 @@ public class GameTest {
 		assertEquals(GameLogic.getCurrentPlayer(), 'X');
 	}
 	
+	// Check if valid move is allowed
+	// Valid move is trying to play on the cell that is not taken
+	@Test
+	public void testValidMove() {
+		GameLogic.startGame();
+		GameLogic.playCPUasX();
+		GameLogic.nextPlayer();
+		boolean valid = GameLogic.playHuman(1, 1);
+		assertEquals(valid, true);
+	}
+	
+	// Check if invalid move is disallowed
+	// Invalid move is trying to play on the cell that is already taken
+	@Test
+	public void testInvalidMove() {
+		GameLogic.startGame();
+		GameLogic.playCPUasX();
+		GameLogic.nextPlayer();
+		boolean valid = GameLogic.playHuman(0, 0);
+		assertEquals(valid, false);
+	}
+	
 	// Test game when human plays first (one possible case)
 	@Test
 	public void testHumanFirst() {
